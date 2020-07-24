@@ -45,7 +45,11 @@ class Speedtrap {
 
     if (remaining < 0) {
       await redis.zrem(key, now)
-      onExceeded()
+
+      const waitTime = now - results[2][0]
+      onExceeded({
+        waitTime,
+      })
 
       if (!letOffWithAWarning) {
         const ticket = new Error(`Do you know how fast you were going? Speed limit of ${max}/${duration}ms exceeded`)
