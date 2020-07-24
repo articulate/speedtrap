@@ -1,14 +1,15 @@
 {
-  "name": "rate-limiter",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@articulate/speedtrap",
+  "version": "0.0.1",
+  "description": "a redis based rate limiter that you and your family will love.",
   "main": "index.js",
+  "repository": "git@github.com:articulate/speedtrap.git",
   "scripts": {
     "lint": "eslint .",
     "test": "jest"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "articulate",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "dotenv": "^8.2.0",

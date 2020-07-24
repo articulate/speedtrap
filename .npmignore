@@ -1,0 +1,14 @@
+.dockerignore
+.eslintrc.js
+.git*
+.npmignore
+.env
+.env.default
+docker-compose.*
+Dockerfile
+Jenkinsfile
+Makefile
+node_modules
+service.json
+test
+yarn.lock
