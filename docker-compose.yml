@@ -3,7 +3,7 @@ services:
   test:
     build:
       context: .
-    command: yarn test
+    command: 'yarn test'
     depends_on:
       - redis
     env_file:

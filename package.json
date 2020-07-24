@@ -16,6 +16,7 @@
     "eslint-plugin-jest": "^23.18.0",
     "eslint-plugin-no-only-tests": "^2.4.0",
     "ioredis": "^4.17.3",
-    "jest": "^26.1.0"
+    "jest": "^26.1.0",
+    "tinygen": "^0.2.0"
   }
 }

@@ -50,6 +50,7 @@ speedTrap.run(myApiCall, param1, param2)
   .catch((error) => {
     if (error.isSpeedTrap) {
       // We were going too fast!! API call was not made. Maybe we sleep and retry?
+      console.log(`got ticketed, gonna have to wait ${error.waitTime}ms`)
     } else {
       throw error // not from speeding...
     }
@@ -59,3 +60,29 @@ speedTrap.run(myApiCall, param1, param2)
 ## Let off with a warning
 
 Want to be let off with a warning? Better hope you get a nice officer. The `letOffWithAWarning` configuration option will allow your function to continue running, but rest assured a warning will still be issued to the handler you provided for the `onExceeded` option.
+
+## Contributing
+
+### Prerequisites
+
+You need to have docker installed with docker-compose. Alternatively you can set `REDIS_URL` in you `.env` to a redis instance of your choice.
+
+### Running
+
+First set up your `.env`
+
+```bash
+cp .env.default .env
+```
+
+run the tests
+
+```bash
+docker-compose up
+```
+
+run the tests in watch mode with
+
+```bash
+docker-compose run --rm test yarn test --watchAll
+```
