@@ -21,6 +21,7 @@ class Speedtrap {
     this.key = `speed-trap:${cleanName(name)}`
     this.letOffWithAWarning = letOffWithAWarning
     this.max = max
+    this.name = name
     this.onExceeded = onExceeded
     this.redis = redis
   }
@@ -59,7 +60,8 @@ class Speedtrap {
       })
 
       if (!letOffWithAWarning) {
-        const ticket = new Error(`Do you know how fast you were going? Speed limit of ${max}/${duration}ms exceeded`)
+        const { name }= this
+        const ticket = new Error(`Do you know how fast you were going? Speed limit of ${max}/${duration}ms exceeded for ${name}`)
         ticket.isSpeedTrap = true
         ticket.waitTime = waitTime
         return Promise.reject(ticket)
