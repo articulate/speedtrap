@@ -1,13 +1,13 @@
 version: '2'
 services:
-  test:
+  app:
     build:
       context: .
     command: 'yarn test'
     depends_on:
       - redis
     env_file:
-      - .env.default
+      - .env
     mem_reservation: "128m"
     volumes:
       - '.:/app'

@@ -78,11 +78,11 @@ cp .env.default .env
 run the tests
 
 ```bash
-docker-compose up
+docker-compose run --rm app yarn test
 ```
 
 run the tests in watch mode with
 
 ```bash
-docker-compose run --rm test yarn test --watchAll
+docker-compose run --rm app yarn test --watchAll
 ```
