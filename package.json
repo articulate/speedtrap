@@ -10,14 +10,15 @@
   },
   "author": "articulate",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "ioredis": "^4.17.3",
+    "tinygen": "^0.2.0"
+  },
   "devDependencies": {
     "dotenv": "^8.2.0",
     "eslint": "^7.5.0",
     "eslint-plugin-jest": "^23.18.0",
     "eslint-plugin-no-only-tests": "^2.4.0",
-    "ioredis": "^4.17.3",
-    "jest": "^26.1.0",
-    "tinygen": "^0.2.0"
+    "jest": "^26.1.0"
   }
 }
