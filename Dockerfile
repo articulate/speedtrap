@@ -1,3 +1,5 @@
 FROM node:14.4-stretch-slim
-RUN yarn install --frozen-lockfile
+RUN apt-get update && apt-get install make
+COPY . /app/
+RUN cd ./app && yarn install --frozen-lockfile
 CMD ["yarn", "test"]
