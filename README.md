@@ -1,4 +1,4 @@
-# :police_car: SpeedTrap
+# :police_car: SpeedTrap Test
 
 Tired of blowing 3rd party API rate limits? Does your 3rd party API keep counting requests even when it returns a 429? Does your app run in a distributed environment? Does your app have a "heavy foot"?? Then this library is for you! SpeedTrap is a tool that uses redis to keep track of your speed. Just `run()` the SpeedTrap with your function and parameters, and get a `Promise` back with your result. But watch your speed! If you go too fast, the SpeedTrap Will catch you and ticket you with a rejected `Promise`. You wont be running anywhere.
 
