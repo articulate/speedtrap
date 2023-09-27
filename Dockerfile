@@ -1,3 +1,5 @@
-FROM node:14.4-stretch-slim
+FROM articulate/articulate-node:14-buster-slim
+
+COPY package.json yarn.lock ./
+
 RUN yarn install --frozen-lockfile
-CMD ["yarn", "test"]
