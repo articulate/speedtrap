@@ -1,20 +1,15 @@
-version: '2'
 services:
-  app:
-    build:
-      context: .
-    command: 'yarn test'
+  test:
+    build: .
+    command: make ci
     depends_on:
       - redis
-    env_file:
-      - .env.default
-    mem_reservation: "128m"
     volumes:
-      - '.:/app'
-      - '/app/node_modules'
-    working_dir: "/app"
-
+      - .:/service
+      - /service/node_modules
+    environment:
+      REDIS_URL: redis://redis:6379
   redis:
     image: redis
     expose:
-      - '6379'
+      - 6379

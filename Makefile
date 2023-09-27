@@ -1,3 +1,3 @@
-jenkins:
+ci:
 	yarn lint
 	yarn test

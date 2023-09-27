@@ -63,26 +63,20 @@ Want to be let off with a warning? Better hope you get a nice officer. The `letO
 
 ## Contributing
 
-### Prerequisites
-
-You need to have docker installed with docker-compose. Alternatively you can set `REDIS_URL` in you `.env` to a redis instance of your choice.
-
-### Running
-
-First set up your `.env`
+If you have Docker Compose installed, you can run lint and tests with:
 
 ```bash
-cp .env.default .env
+docker compose run --rm test
 ```
 
-run the tests
+Run tests in watch mode with:
 
 ```bash
-docker-compose run --rm app yarn test
+docker compose run --rm test yarn test --watchAll
 ```
 
-run the tests in watch mode with
+You can also run without Docker Compose by setting a `REDIS_URL` environment variable.
 
 ```bash
-docker-compose run --rm app yarn test --watchAll
+REDIS_URL=redis://localhost:6379 yarn test
 ```
